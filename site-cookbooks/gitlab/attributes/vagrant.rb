@@ -5,10 +5,15 @@ default['gitlab']['home'] = "/home/vagrant"
 default['gitlab']['app_home'] = "/vagrant/gitlabhq"
 default['gitlab']['repos_path'] = "/vagrant/repositories"
 default['gitlab']['app_shell_home'] = "/vagrant/gitlab-shell"
+default['gitlab']['repos_satellites'] = "/vagrant/gitlab-satellites/"
 
 # Set github URL for gitlab
 default['gitlab']['gitlab_url'] = "git://github.com/gitlabhq/gitlabhq.git"
 default['gitlab']['gitlab_branch'] = "master"
+
+# Gitlab URLs
+default['gitlab']['app_url'] = "http://localhost/"
+default['gitlab']['host'] = "localhost"
 
 default['gitlab']['packages'] = %w{
   vim curl wget checkinstall libxslt-dev

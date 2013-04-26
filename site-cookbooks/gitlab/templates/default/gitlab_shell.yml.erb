@@ -1,11 +1,12 @@
 # GitLab user. git by default
-user: vagrant
+user: <%= node['gitlab']['user'] %>
 
 # Url to gitlab instance. Used for api calls
-gitlab_url: "http://localhost/"
+gitlab_url: <%= node['gitlab']['app_url'] %>
 
 # Repositories path
-repos_path: "/home/vagrant"
+repos_path: <%= node['gitlab']['repos_path'] %>
 
 # File used as authorized_keys for gitlab user
 auth_file: "/home/vagrant/.ssh/authorized_keys"
+
