@@ -188,11 +188,11 @@ end
 # `execute` doesn't use the user environment and so this is a work around to do
 # as if it was vagrant and not root.
 # http://tickets.opscode.com/browse/CHEF-2288?page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#issue-tabs
-execute "gitlab-bundle-install" do
-  command "su -l -c 'cd #{node['gitlab']['app_home']} && bundle install' vagrant"
-  cwd node['gitlab']['app_home']
-  user 'root'
-end
+# execute "gitlab-bundle-install" do
+#   command "su -l -c 'cd #{node['gitlab']['app_home']} && bundle install' vagrant"
+#   cwd node['gitlab']['app_home']
+#   user 'root'
+# end
 
 %w{ development test }.each do |env|
   # Setup database
