@@ -1,0 +1,1 @@
+mysql -pvagrant -Nse 'show tables' gitlabhq_development | while read table; do mysql -pvagrant -e "truncate table \`$table\`" gitlabhq_development; done
